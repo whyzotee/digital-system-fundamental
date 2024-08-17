@@ -1,0 +1,228 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Lab5b.vf
+// /___/   /\     Timestamp : 08/17/2024 23:07:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab5/Lab5b.vf -w /home/whyzotee/Desktop/Lab5/Lab5b.sch
+//Design Name: Lab5b
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Lab5b(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module mod2_MUSER_Lab5b(CLK_IN, 
+                        OUT_A);
+
+    input CLK_IN;
+   output OUT_A;
+   
+   wire XLXN_3;
+   wire XLXN_5;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_Lab5b  XLXI_1 (.C(CLK_IN), 
+                              .CLR(XLXN_3), 
+                              .J(XLXN_5), 
+                              .K(XLXN_5), 
+                              .Q(OUT_A));
+   GND  XLXI_2 (.G(XLXN_3));
+   VCC  XLXI_3 (.P(XLXN_5));
+endmodule
+`timescale 1ns / 1ps
+
+module mod10_MUSER_Lab5b(CLK_IN, 
+                         OUT_A);
+
+    input CLK_IN;
+   output OUT_A;
+   
+   wire XLXN_9;
+   wire XLXN_29;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_38;
+   wire XLXN_40;
+   wire XLXN_41;
+   wire XLXN_43;
+   wire XLXN_47;
+   wire OUT_A_DUMMY;
+   
+   assign OUT_A = OUT_A_DUMMY;
+   (* HU_SET = "XLXI_1_1" *) 
+   FJKC_HXILINX_Lab5b  XLXI_1 (.C(XLXN_38), 
+                              .CLR(XLXN_41), 
+                              .J(XLXN_9), 
+                              .K(XLXN_9), 
+                              .Q(OUT_A_DUMMY));
+   (* HU_SET = "XLXI_5_2" *) 
+   FJKC_HXILINX_Lab5b  XLXI_5 (.C(XLXN_36), 
+                              .CLR(XLXN_41), 
+                              .J(XLXN_9), 
+                              .K(XLXN_9), 
+                              .Q(XLXN_40));
+   (* HU_SET = "XLXI_6_3" *) 
+   FJKC_HXILINX_Lab5b  XLXI_6 (.C(XLXN_29), 
+                              .CLR(XLXN_41), 
+                              .J(XLXN_9), 
+                              .K(XLXN_9), 
+                              .Q(XLXN_35));
+   (* HU_SET = "XLXI_7_4" *) 
+   FJKC_HXILINX_Lab5b  XLXI_7 (.C(CLK_IN), 
+                              .CLR(XLXN_41), 
+                              .J(XLXN_9), 
+                              .K(XLXN_9), 
+                              .Q(XLXN_47));
+   VCC  XLXI_10 (.P(XLXN_9));
+   NAND2  XLXI_11 (.I0(XLXN_35), 
+                  .I1(OUT_A_DUMMY), 
+                  .O(XLXN_43));
+   INV  XLXI_12 (.I(XLXN_47), 
+                .O(XLXN_29));
+   INV  XLXI_14 (.I(XLXN_35), 
+                .O(XLXN_36));
+   INV  XLXI_15 (.I(XLXN_40), 
+                .O(XLXN_38));
+   INV  XLXI_16 (.I(XLXN_43), 
+                .O(XLXN_41));
+endmodule
+`timescale 1ns / 1ps
+
+module Lab5b(P123, 
+             P27, 
+             P29, 
+             P32, 
+             P34, 
+             P35, 
+             P40, 
+             P41, 
+             P44);
+
+    input P123;
+   output P27;
+   output P29;
+   output P32;
+   output P34;
+   output P35;
+   output P40;
+   output P41;
+   output P44;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_27;
+   wire XLXN_86;
+   wire XLXN_87;
+   wire XLXN_90;
+   wire XLXN_91;
+   wire XLXN_98;
+   wire XLXN_134;
+   wire XLXN_170;
+   wire XLXN_173;
+   wire XLXN_175;
+   wire XLXN_178;
+   
+   mod10_MUSER_Lab5b  XLXI_1 (.CLK_IN(XLXN_134), 
+                             .OUT_A(XLXN_3));
+   mod10_MUSER_Lab5b  XLXI_2 (.CLK_IN(XLXN_3), 
+                             .OUT_A(XLXN_4));
+   mod10_MUSER_Lab5b  XLXI_3 (.CLK_IN(XLXN_4), 
+                             .OUT_A(XLXN_5));
+   mod10_MUSER_Lab5b  XLXI_4 (.CLK_IN(XLXN_5), 
+                             .OUT_A(XLXN_6));
+   mod10_MUSER_Lab5b  XLXI_5 (.CLK_IN(XLXN_6), 
+                             .OUT_A(XLXN_7));
+   mod10_MUSER_Lab5b  XLXI_6 (.CLK_IN(XLXN_7), 
+                             .OUT_A(XLXN_27));
+   mod10_MUSER_Lab5b  XLXI_7 (.CLK_IN(XLXN_27), 
+                             .OUT_A(XLXN_86));
+   mod2_MUSER_Lab5b  XLXI_26 (.CLK_IN(XLXN_86), 
+                             .OUT_A(XLXN_87));
+   (* HU_SET = "XLXI_27_5" *) 
+   FJKC_HXILINX_Lab5b  XLXI_27 (.C(XLXN_87), 
+                               .CLR(XLXN_98), 
+                               .J(XLXN_90), 
+                               .K(XLXN_90), 
+                               .Q(XLXN_173));
+   VCC  XLXI_28 (.P(XLXN_90));
+   (* HU_SET = "XLXI_29_6" *) 
+   FJKC_HXILINX_Lab5b  XLXI_29 (.C(XLXN_175), 
+                               .CLR(XLXN_98), 
+                               .J(XLXN_90), 
+                               .K(XLXN_90), 
+                               .Q(XLXN_91));
+   (* HU_SET = "XLXI_30_7" *) 
+   FJKC_HXILINX_Lab5b  XLXI_30 (.C(XLXN_178), 
+                               .CLR(XLXN_98), 
+                               .J(XLXN_90), 
+                               .K(XLXN_90), 
+                               .Q(XLXN_170));
+   BCDto7SegDecoder  XLXI_32 (.Input_A(XLXN_98), 
+                             .Input_B(XLXN_170), 
+                             .Input_C(XLXN_91), 
+                             .Input_D(XLXN_173), 
+                             .A(P41), 
+                             .B(P40), 
+                             .C(P35), 
+                             .COMMON(P44), 
+                             .D(P34), 
+                             .E(P32), 
+                             .F(P29), 
+                             .G(P27));
+   INV  XLXI_47 (.I(P123), 
+                .O(XLXN_134));
+   GND  XLXI_54 (.G(XLXN_98));
+   INV  XLXI_55 (.I(XLXN_173), 
+                .O(XLXN_175));
+   INV  XLXI_56 (.I(XLXN_91), 
+                .O(XLXN_178));
+endmodule

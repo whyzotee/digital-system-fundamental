@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/whyzotee/Desktop/Lab5/Lab5b.ncd
+OUTFILE=/home/whyzotee/Desktop/Lab5/Lab5b.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/whyzotee/Desktop/Lab5
+LICENSE=WebPack
+USER_INFO=213106373_0_0_733
