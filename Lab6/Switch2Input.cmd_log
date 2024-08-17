@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym Switch2Input /home/whyzotee/Desktop/Lab6/Switch2Input.sch /home/whyzotee/Desktop/Lab6/Switch2Input.sym 

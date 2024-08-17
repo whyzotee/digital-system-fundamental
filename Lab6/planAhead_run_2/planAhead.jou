@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Aug 16 20:48:59 2024
+# Process ID: 19694
+# Log file: /home/whyzotee/Desktop/Lab6/planAhead_run_2/planAhead.log
+# Journal file: /home/whyzotee/Desktop/Lab6/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/whyzotee/Desktop/Lab6/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P78 [get_ports A_P78]
+endgroup
+startgroup
+set_property package_pin P75 [get_ports B_P75]
+endgroup
+startgroup
+set_property package_pin P74 [get_ports C_P74]
+endgroup
+startgroup
+set_property package_pin P67 [get_ports D_P67]
+endgroup
+save_constraints

@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod8.vf
+// /___/   /\     Timestamp : 08/17/2024 00:29:23
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/mod8.vf -w /home/whyzotee/Desktop/Lab6/mod8.sch
+//Design Name: mod8
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod8(CLK_IN, 
+            CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   
+   mod2  XLXI_1 (.CLK_IN(CLK_IN), 
+                .OUT_A(XLXN_1));
+   mod2  XLXI_2 (.CLK_IN(XLXN_1), 
+                .OUT_A(XLXN_2));
+   mod2  XLXI_3 (.CLK_IN(XLXN_2), 
+                .OUT_A(CLK_OUT));
+endmodule

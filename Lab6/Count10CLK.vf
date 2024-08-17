@@ -1,0 +1,126 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Count10CLK.vf
+// /___/   /\     Timestamp : 08/17/2024 14:03:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/Count10CLK.vf -w /home/whyzotee/Desktop/Lab6/Count10CLK.sch
+//Design Name: Count10CLK
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Count10CLK(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Count10CLK(CLK_IN, 
+                  CLK_OUT, 
+                  OUT_A, 
+                  OUT_B, 
+                  OUT_C, 
+                  OUT_D);
+
+    input CLK_IN;
+   output CLK_OUT;
+   output OUT_A;
+   output OUT_B;
+   output OUT_C;
+   output OUT_D;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_7;
+   wire CLK_OUT_DUMMY;
+   wire OUT_A_DUMMY;
+   wire OUT_B_DUMMY;
+   wire OUT_C_DUMMY;
+   wire OUT_D_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   assign OUT_A = OUT_A_DUMMY;
+   assign OUT_B = OUT_B_DUMMY;
+   assign OUT_C = OUT_C_DUMMY;
+   assign OUT_D = OUT_D_DUMMY;
+   (* HU_SET = "XLXI_1_10" *) 
+   FJKC_HXILINX_Count10CLK  XLXI_1 (.C(CLK_IN), 
+                                   .CLR(CLK_OUT_DUMMY), 
+                                   .J(XLXN_1), 
+                                   .K(XLXN_1), 
+                                   .Q(OUT_D_DUMMY));
+   (* HU_SET = "XLXI_2_11" *) 
+   FJKC_HXILINX_Count10CLK  XLXI_2 (.C(CLK_IN), 
+                                   .CLR(CLK_OUT_DUMMY), 
+                                   .J(XLXN_2), 
+                                   .K(XLXN_2), 
+                                   .Q(OUT_B_DUMMY));
+   (* HU_SET = "XLXI_3_12" *) 
+   FJKC_HXILINX_Count10CLK  XLXI_3 (.C(CLK_IN), 
+                                   .CLR(CLK_OUT_DUMMY), 
+                                   .J(OUT_D_DUMMY), 
+                                   .K(OUT_D_DUMMY), 
+                                   .Q(OUT_C_DUMMY));
+   (* HU_SET = "XLXI_4_13" *) 
+   FJKC_HXILINX_Count10CLK  XLXI_4 (.C(CLK_IN), 
+                                   .CLR(CLK_OUT_DUMMY), 
+                                   .J(XLXN_7), 
+                                   .K(XLXN_7), 
+                                   .Q(OUT_A_DUMMY));
+   VCC  XLXI_5 (.P(XLXN_1));
+   INV  XLXI_6 (.I(XLXN_5), 
+               .O(CLK_OUT_DUMMY));
+   AND2  XLXI_26 (.I0(OUT_D_DUMMY), 
+                 .I1(OUT_C_DUMMY), 
+                 .O(XLXN_2));
+   AND3  XLXI_27 (.I0(OUT_D_DUMMY), 
+                 .I1(OUT_C_DUMMY), 
+                 .I2(OUT_B_DUMMY), 
+                 .O(XLXN_7));
+   NAND2  XLXI_28 (.I0(OUT_C_DUMMY), 
+                  .I1(OUT_A_DUMMY), 
+                  .O(XLXN_5));
+endmodule

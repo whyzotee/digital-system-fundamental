@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym mod10 /home/whyzotee/Desktop/Lab5/mod10.sch /home/whyzotee/Desktop/Lab6/mod10.sym 

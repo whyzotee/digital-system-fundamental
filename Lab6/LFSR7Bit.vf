@@ -1,0 +1,93 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LFSR7Bit.vf
+// /___/   /\     Timestamp : 08/17/2024 15:05:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/LFSR7Bit.vf -w /home/whyzotee/Desktop/Lab6/LFSR7Bit.sch
+//Design Name: LFSR7Bit
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module NOR7_HXILINX_LFSR7Bit (O, I0, I1, I2, I3, I4, I5, I6);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+   input I6;
+
+assign O = !(I0 || I1 || I2 || I3 || I4 || I5 || I6);
+
+endmodule
+`timescale 1ns / 1ps
+
+module LFSR7Bit(CLK_IN, 
+                OUT_CLK);
+
+    input CLK_IN;
+   output OUT_CLK;
+   
+   wire CLK_OUT;
+   wire XLXN_1;
+   wire XLXN_3;
+   wire XLXN_13;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_52;
+   wire XLXN_109;
+   wire OUT_CLK_DUMMY;
+   
+   assign OUT_CLK = OUT_CLK_DUMMY;
+   FDS  XLXI_1 (.C(CLK_IN), 
+               .D(XLXN_1), 
+               .S(XLXN_109), 
+               .Q(XLXN_3));
+   FD #( .INIT(1'b0) ) XLXI_2 (.C(CLK_IN), 
+              .D(XLXN_3), 
+              .Q(XLXN_13));
+   FD #( .INIT(1'b0) ) XLXI_7 (.C(CLK_IN), 
+              .D(XLXN_13), 
+              .Q(CLK_OUT));
+   FD #( .INIT(1'b0) ) XLXI_17 (.C(CLK_IN), 
+               .D(CLK_OUT), 
+               .Q(XLXN_24));
+   FD #( .INIT(1'b0) ) XLXI_18 (.C(CLK_IN), 
+               .D(XLXN_24), 
+               .Q(XLXN_25));
+   FD #( .INIT(1'b0) ) XLXI_19 (.C(CLK_IN), 
+               .D(XLXN_25), 
+               .Q(XLXN_52));
+   XOR3  XLXI_20 (.I0(XLXN_3), 
+                 .I1(XLXN_25), 
+                 .I2(OUT_CLK_DUMMY), 
+                 .O(XLXN_1));
+   FD #( .INIT(1'b0) ) XLXI_21 (.C(CLK_IN), 
+               .D(XLXN_52), 
+               .Q(OUT_CLK_DUMMY));
+   (* HU_SET = "XLXI_55_9" *) 
+   NOR7_HXILINX_LFSR7Bit  XLXI_55 (.I0(OUT_CLK_DUMMY), 
+                                  .I1(XLXN_52), 
+                                  .I2(XLXN_25), 
+                                  .I3(XLXN_24), 
+                                  .I4(CLK_OUT), 
+                                  .I5(XLXN_13), 
+                                  .I6(XLXN_3), 
+                                  .O(XLXN_109));
+endmodule

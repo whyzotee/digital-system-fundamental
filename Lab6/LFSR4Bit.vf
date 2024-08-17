@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : LFSR4Bit.vf
+// /___/   /\     Timestamp : 08/17/2024 14:00:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/LFSR4Bit.vf -w /home/whyzotee/Desktop/Lab6/LFSR4Bit.sch
+//Design Name: LFSR4Bit
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LFSR4Bit(CLK_IN, 
+                CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_7;
+   wire XLXN_10;
+   wire XLXN_12;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_2 (.C(CLK_IN), 
+              .D(XLXN_10), 
+              .Q(XLXN_2));
+   FDS  XLXI_4 (.C(CLK_IN), 
+               .D(XLXN_7), 
+               .S(XLXN_12), 
+               .Q(XLXN_10));
+   FD #( .INIT(1'b0) ) XLXI_7 (.C(CLK_IN), 
+              .D(XLXN_2), 
+              .Q(XLXN_3));
+   FD #( .INIT(1'b0) ) XLXI_8 (.C(CLK_IN), 
+              .D(XLXN_3), 
+              .Q(CLK_OUT_DUMMY));
+   XOR2  XLXI_9 (.I0(XLXN_10), 
+                .I1(CLK_OUT_DUMMY), 
+                .O(XLXN_7));
+   NOR4  XLXI_10 (.I0(CLK_OUT_DUMMY), 
+                 .I1(XLXN_3), 
+                 .I2(XLXN_2), 
+                 .I3(XLXN_10), 
+                 .O(XLXN_12));
+endmodule

@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Switch2Input.vf
+// /___/   /\     Timestamp : 08/17/2024 23:08:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/Switch2Input.vf -w /home/whyzotee/Desktop/Lab6/Switch2Input.sch
+//Design Name: Switch2Input
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Switch2Input(CLK_IN, 
+                    IN_A_1, 
+                    IN_A_2, 
+                    IN_B_1, 
+                    IN_B_2, 
+                    IN_C_1, 
+                    IN_C_2, 
+                    IN_D_1, 
+                    IN_D_2, 
+                    OUT_A, 
+                    OUT_B, 
+                    OUT_C, 
+                    OUT_D);
+
+    input CLK_IN;
+    input IN_A_1;
+    input IN_A_2;
+    input IN_B_1;
+    input IN_B_2;
+    input IN_C_1;
+    input IN_C_2;
+    input IN_D_1;
+    input IN_D_2;
+   output OUT_A;
+   output OUT_B;
+   output OUT_C;
+   output OUT_D;
+   
+   wire XLXN_48;
+   wire XLXN_50;
+   wire XLXN_52;
+   wire XLXN_188;
+   wire XLXN_219;
+   wire XLXN_220;
+   wire XLXN_225;
+   wire XLXN_226;
+   wire XLXN_1147;
+   
+   AND2  XLXI_19 (.I0(CLK_IN), 
+                 .I1(IN_C_1), 
+                 .O(XLXN_226));
+   AND2  XLXI_20 (.I0(CLK_IN), 
+                 .I1(IN_D_1), 
+                 .O(XLXN_225));
+   AND2  XLXI_21 (.I0(CLK_IN), 
+                 .I1(IN_A_1), 
+                 .O(XLXN_219));
+   OR2  XLXI_22 (.I0(XLXN_48), 
+                .I1(XLXN_219), 
+                .O(OUT_A));
+   OR2  XLXI_23 (.I0(XLXN_188), 
+                .I1(XLXN_220), 
+                .O(OUT_B));
+   OR2  XLXI_24 (.I0(XLXN_50), 
+                .I1(XLXN_226), 
+                .O(OUT_C));
+   OR2  XLXI_25 (.I0(XLXN_52), 
+                .I1(XLXN_225), 
+                .O(OUT_D));
+   AND2  XLXI_26 (.I0(XLXN_1147), 
+                 .I1(IN_A_2), 
+                 .O(XLXN_48));
+   AND2  XLXI_28 (.I0(XLXN_1147), 
+                 .I1(IN_C_2), 
+                 .O(XLXN_50));
+   AND2  XLXI_29 (.I0(XLXN_1147), 
+                 .I1(IN_D_2), 
+                 .O(XLXN_52));
+   AND2  XLXI_63 (.I0(CLK_IN), 
+                 .I1(IN_B_1), 
+                 .O(XLXN_220));
+   AND2  XLXI_64 (.I0(XLXN_1147), 
+                 .I1(IN_B_2), 
+                 .O(XLXN_188));
+   INV  XLXI_66 (.I(CLK_IN), 
+                .O(XLXN_1147));
+endmodule

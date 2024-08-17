@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym Comparator /home/whyzotee/Desktop/Lab6/Comparator.sch /home/whyzotee/Desktop/Lab6/Comparator.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym Comparator /home/whyzotee/Desktop/Lab6/Comparator.sch /home/whyzotee/Desktop/Lab6/Comparator.sym 

@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mod200000.vf
+// /___/   /\     Timestamp : 08/17/2024 15:35:08
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/mod200000.vf -w /home/whyzotee/Desktop/Lab6/mod200000.sch
+//Design Name: mod200000
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mod200000(CLK_IN, 
+                 OUT_CLK);
+
+    input CLK_IN;
+   output OUT_CLK;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_9;
+   
+   mod2  XLXI_1 (.CLK_IN(XLXN_9), 
+                .OUT_A(OUT_CLK));
+   mod10  XLXI_2 (.CLK_IN(CLK_IN), 
+                 .OUT_A(XLXN_1));
+   mod10  XLXI_3 (.CLK_IN(XLXN_1), 
+                 .OUT_A(XLXN_2));
+   mod10  XLXI_4 (.CLK_IN(XLXN_2), 
+                 .OUT_A(XLXN_3));
+   mod10  XLXI_5 (.CLK_IN(XLXN_3), 
+                 .OUT_A(XLXN_4));
+   mod10  XLXI_6 (.CLK_IN(XLXN_4), 
+                 .OUT_A(XLXN_9));
+endmodule

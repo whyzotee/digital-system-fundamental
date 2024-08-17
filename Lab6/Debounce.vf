@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Debounce.vf
+// /___/   /\     Timestamp : 08/17/2024 00:51:33
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog /home/whyzotee/Desktop/Lab6/Debounce.vf -w /home/whyzotee/Desktop/Lab6/Debounce.sch
+//Design Name: Debounce
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Debounce(CLK, 
+                IN_BT, 
+                OUT_BT);
+
+    input CLK;
+    input IN_BT;
+   output OUT_BT;
+   
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
+              .D(IN_BT), 
+              .Q(XLXN_7));
+   FD #( .INIT(1'b0) ) XLXI_2 (.C(CLK), 
+              .D(XLXN_7), 
+              .Q(XLXN_6));
+   FD #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+              .D(XLXN_6), 
+              .Q(XLXN_4));
+   AND3B1  XLXI_4 (.I0(XLXN_4), 
+                  .I1(XLXN_6), 
+                  .I2(XLXN_7), 
+                  .O(OUT_BT));
+endmodule
