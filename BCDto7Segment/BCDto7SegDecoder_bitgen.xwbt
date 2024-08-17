@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.ncd
+OUTFILE=/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/whyzotee/Desktop/BCDto7Segment
+LICENSE=WebPack
+USER_INFO=213106373_0_0_733

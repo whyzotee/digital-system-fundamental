@@ -1,0 +1,64 @@
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+xst -intstyle ise -ifn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.xst" -ofn "/home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCDto7SegDecoder.ucf -p xc6slx9-tqg144-3 BCDto7SegDecoder.ngc BCDto7SegDecoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ngd BCDto7SegDecoder.pcf 
+par -w -intstyle ise -ol high -mt off BCDto7SegDecoder_map.ncd BCDto7SegDecoder.ncd BCDto7SegDecoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BCDto7SegDecoder.twx BCDto7SegDecoder.ncd -o BCDto7SegDecoder.twr BCDto7SegDecoder.pcf -ucf BCDto7SegDecoder.ucf 
+bitgen -intstyle ise -f BCDto7SegDecoder.ut BCDto7SegDecoder.ncd 
+sch2sym -intstyle ise -family spartan6 -refsym BCDto7SegDecoder /home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.sch /home/whyzotee/Desktop/BCDto7Segment/BCDto7SegDecoder.sym 
